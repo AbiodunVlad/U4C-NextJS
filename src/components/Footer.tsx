@@ -6,16 +6,16 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <div className="bg-black flex flex-col px-20 py-10">
-      <div className="flex flex-row justify-between items-start pb-28 gap-20">
-        <div className="flex flex-col w-1/3">
+    <div className="bg-black flex flex-col px-3 md:px-20 py-10">
+      <div className="flex flex-col md:flex-row items-center justify-center md:justify-between md:items-start pb-28 gap-20">
+        <div className="flex flex-col w-auto items-center">
           <Image src="/images/logo1.svg" alt="" width={200} height={150} />
 
-          <p className="text-xs text-white mb-20">
+          <p className="text-xs text-white text-center mb-20">
             We are building the future <br /> of African Business
           </p>
 
-          <p className="text-pink-600 text-xs mb-5">
+          <p className="text-pink-600 text-xs text-center mb-5">
             Stay updated with the latest news, resources,
             <br /> and events from under40ceos.com.
           </p>
@@ -37,7 +37,7 @@ export default function Footer() {
 
         <div className="flex flex-col w-2/3">
           <div className="flex flex-col">
-            <div className="flex flex-row justify-between pb-10">
+            <div className="flex flex-col md:flex-row justify-between pb-10">
               <div className="flex flex-col">
                 <p className="text-xs font-bold text-purple-700 mb-5">
                   Quicklinks
@@ -135,7 +135,7 @@ export default function Footer() {
 
             <div className="bg-gray-300 w-full h-0.5"></div>
 
-            <div className="flex flex-row justify-between pt-10">
+            <div className="flex flex-col md:flex-row justify-between pt-10">
               <div className="flex flex-col">
                 <p className="text-xs font-bold text-purple-700 mb-5">
                   West Africa Office

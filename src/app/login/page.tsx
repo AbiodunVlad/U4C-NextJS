@@ -17,8 +17,8 @@ export default function Login() {
   };
 
   return (
-    <div className="flex flex-rox items-center justify-around">
-      <div className="bg-slate-100 w-1/2 flex flex-col items-center justify-center min-h-screen py-2">
+    <div className="flex flex-col-reverse md:flex-row items-center justify-around min-h-screen">
+      <div className="bg-slate-100 w-full md:w-1/2 flex flex-col items-center justify-center min-h-screen py-2 px-4">
         <Image
           className="mb-5"
           src="/images/logo.svg"
@@ -30,7 +30,7 @@ export default function Login() {
         <h2 className="font-bold text-3xl mb-5">Login</h2>
 
         <input
-          className="p-2 border border-red-300 rounded-lg mb-5 focus:outline-none focus:border-red-800"
+          className="w-full md:w-3/4 p-2 border border-red-300 rounded-lg mb-5 focus:outline-none focus:border-red-800"
           placeholder="Email"
           id="email"
           type="email"
@@ -39,7 +39,7 @@ export default function Login() {
         />
 
         <input
-          className="p-2 border border-red-300 rounded-lg mb-5 focus:outline-none focus:border-red-800"
+          className="w-full md:w-3/4 p-2 border border-red-300 rounded-lg mb-5 focus:outline-none focus:border-red-800"
           placeholder="Password"
           type="password"
           value={user.password}
@@ -48,7 +48,7 @@ export default function Login() {
 
         <button
           onClick={onLogin}
-          className="p-2 border bg-purple-700 rounded-full mb-5 w-60 text-white font-bold"
+          className="w-full md:w-3/4 p-2 border bg-purple-700 rounded-full mb-5 text-white font-bold"
         >
           Login
         </button>
@@ -70,8 +70,7 @@ export default function Login() {
 
         <p className="mb-5">Or</p>
 
-        <button className="p-2 border bg-white rounded-xl mb-10 w-60">
-          {" "}
+        <button className="w-full md:w-3/4 p-2 border bg-white rounded-xl mb-10">
           Login with Google
         </button>
 
@@ -84,7 +83,7 @@ export default function Login() {
       </div>
 
       <div
-        className="w-1/2 flex flex-col items-center justify-center min-h-screen py-1"
+        className="w-full md:w-1/2 flex flex-col items-center justify-center min-h-screen py-1"
         style={{
           background:
             "linear-gradient(to left, #7F7FFF 0%, #E6E6FA 50%, #CDB1DB 50%, #E6E6FA 100%)",

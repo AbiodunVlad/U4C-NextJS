@@ -6,9 +6,9 @@ import Image from "next/image";
 
 export default function HeroSection() {
   return (
-    <div className="flex flex-row px-20 py-20 items-center justify-between">
-      <div className="flex flex-col">
-        <h1 className="font-extrabold text-4xl mb-5">
+    <div className="flex flex-col-reverse md:flex-row px-4 md:px-20 py-10 md:py-20 items-center justify-between">
+      <div className="flex flex-col items-center md:items-start text-center md:text-left mb-10 md:mb-0">
+        <h1 className="font-extrabold text-3xl md:text-4xl mb-5">
           Penetrate the African <br />
           market, Leverage the <br />
           <span className="bg-gradient-to-r from-red-500 to-violet-600 bg-clip-text text-transparent">
@@ -25,7 +25,7 @@ export default function HeroSection() {
         </p>
 
         <button
-          className="p-2 rounded-lg mb-10 w-60 text-white font-bold "
+          className="p-2 rounded-lg mb-10 w-60 text-white font-bold"
           style={{ backgroundColor: "#C54ED8" }}
         >
           LEARN MORE
@@ -36,7 +36,7 @@ export default function HeroSection() {
         </div>
       </div>
 
-      <div className="-mt-36">
+      <div className="hidden md:block md:-mt-36">
         <Image
           src="/images/heroArrow.svg"
           alt="arrow"
@@ -45,21 +45,23 @@ export default function HeroSection() {
         />
       </div>
 
-      <div>
+      <div className="w-full md:w-auto md:mb-20">
         <Image
           src="/images/heroImg.svg"
           alt="heroImg"
           width={400}
           height={400}
+          className="w-full md:w-auto"
         />
       </div>
 
-      <div className="flex flex-row items-center w-1/10 gap-2 fixed z-50 bottom-1 right-20 ">
+      <div className="flex flex-row items-center gap-2 fixed z-50 bottom-1 right-4 md:right-20">
         <Image
           src="/images/homeRight.svg"
           alt="right"
           width={100}
           height={100}
+          className="w-20 md:w-50"
         />
       </div>
     </div>

@@ -16,8 +16,8 @@ export default function Signup() {
   const onSignup = async () => {};
 
   return (
-    <div className="flex flex-rox items-center justify-around">
-      <div className="bg-slate-100 w-1/2 flex flex-col items-center justify-center min-h-screen py-2">
+    <div className="flex flex-col-reverse md:flex-row items-center justify-around min-h-screen">
+      <div className="bg-slate-100 w-full md:w-1/2 flex flex-col items-center justify-center min-h-screen py-2 px-4">
         <Image
           className="mb-5"
           src="/images/logo.svg"
@@ -29,7 +29,7 @@ export default function Signup() {
         <h2 className="font-bold text-3xl mb-5">Signup</h2>
 
         <input
-          className="p-2 border border-red-300 rounded-lg mb-5 focus:outline-none focus:border-red-800"
+          className="w-full md:w-3/4 p-2 border border-red-300 rounded-lg mb-5 focus:outline-none focus:border-red-800"
           placeholder="Username"
           id="username"
           type="text"
@@ -38,7 +38,7 @@ export default function Signup() {
         />
 
         <input
-          className="p-2 border border-red-300 rounded-lg mb-5 focus:outline-none focus:border-red-800"
+          className="w-full md:w-3/4 p-2 border border-red-300 rounded-lg mb-5 focus:outline-none focus:border-red-800"
           placeholder="Email"
           id="email"
           type="email"
@@ -47,7 +47,7 @@ export default function Signup() {
         />
 
         <input
-          className="p-2 border border-red-300 rounded-lg mb-5 focus:outline-none focus:border-red-800"
+          className="w-full md:w-3/4 p-2 border border-red-300 rounded-lg mb-5 focus:outline-none focus:border-red-800"
           placeholder="Password"
           type="password"
           value={user.password}
@@ -56,7 +56,7 @@ export default function Signup() {
 
         <button
           onClick={onSignup}
-          className="p-2 border bg-purple-700 rounded-full mb-5 w-60 text-white font-bold"
+          className="w-full md:w-3/4 p-2 border bg-purple-700 rounded-full mb-5 text-white font-bold"
         >
           Signup
         </button>
@@ -78,7 +78,7 @@ export default function Signup() {
 
         <p className="mb-5">Or</p>
 
-        <button className="p-2 border bg-white rounded-xl mb-10 w-60">
+        <button className="w-full md:w-3/4 p-2 border bg-white rounded-xl mb-10">
           {" "}
           Signup with Google
         </button>
@@ -92,7 +92,7 @@ export default function Signup() {
       </div>
 
       <div
-        className="w-1/2 flex flex-col items-center justify-center min-h-screen py-1"
+        className="w-full md:w-1/2 flex flex-col items-center justify-center min-h-screen py-1"
         style={{
           background:
             "linear-gradient(to left, #7F7FFF 0%, #E6E6FA 50%, #CDB1DB 50%, #E6E6FA 100%)",

@@ -3,8 +3,8 @@ import Image from "next/image";
 
 export default function Entrepreneurs() {
   return (
-    <div className="flex flex-row justify-center px-20 gap-5 mb-20">
-      <div className="p-5 bg-white shadow-md flex flex-col items-center justify-center w-60">
+    <div className="flex flex-col md:flex-row justify-center px-5 md:px-20 gap-5 mb-20">
+      <div className="p-5 bg-white shadow-md flex flex-col items-center justify-center md:w-60">
         <Image
           src="/images/olaBrown.svg"
           alt=""
@@ -15,7 +15,7 @@ export default function Entrepreneurs() {
 
         <h6 className="font-bold text-lg mb-2">Duis aute irure dolor in</h6>
 
-        <p className="text-xs mb-10">
+        <p className="text-xs mb-10 text-center md:text-left">
           reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
           pariatur. At vero eos et accusamus et iusto odio dignissimos ducimus
           qui blanditiis praesentium voluptatum.
@@ -29,7 +29,7 @@ export default function Entrepreneurs() {
         </button>
       </div>
 
-      <div className="p-5 bg-white shadow-md flex flex-col items-center justify-between w-60">
+      <div className="p-5 bg-white shadow-md flex flex-col items-center justify-center md:w-60">
         <Image
           src="/images/tayo.svg"
           alt=""
@@ -40,7 +40,7 @@ export default function Entrepreneurs() {
 
         <h6 className="font-bold text-lg mb-2">Duis aute irure dolor in</h6>
 
-        <p className="text-xs mb-10">
+        <p className="text-xs mb-10 text-center md:text-left">
           reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
           pariatur. At vero eos et accusamus et iusto odio dignissimos ducimus
           qui blanditiis praesentium voluptatum.
@@ -54,7 +54,7 @@ export default function Entrepreneurs() {
         </button>
       </div>
 
-      <div className="p-5 bg-white shadow-md flex flex-col items-center justify-center w-60">
+      <div className="p-5 bg-white shadow-md flex flex-col items-center justify-center md:w-60">
         <Image
           src="/images/onye.svg"
           alt=""
@@ -65,7 +65,7 @@ export default function Entrepreneurs() {
 
         <h6 className="font-bold text-lg mb-2">Duis aute irure dolor in</h6>
 
-        <p className="text-xs mb-10">
+        <p className="text-xs mb-10 text-center md:text-left">
           reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
           pariatur. At vero eos et accusamus et iusto odio dignissimos ducimus
           qui blanditiis praesentium voluptatum.
@@ -78,8 +78,6 @@ export default function Entrepreneurs() {
           WATCH FOR FREE
         </button>
       </div>
-
-      
     </div>
   );
 }

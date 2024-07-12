@@ -10,7 +10,7 @@ export default function TVseries() {
       <h1 className="text-pink-500 font-light text-center mb-20">
         <span className="text-black font-extrabold">
           UNDER 40 CEOs TV SERIES
-        </span>
+        </span>{" "}
         FEATURING TOP
         <br /> AFRICAN ENTREPRENUERS ACROSS
         <br /> DIFFERENT NICHE.

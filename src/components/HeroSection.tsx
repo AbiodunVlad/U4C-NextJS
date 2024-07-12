@@ -8,7 +8,7 @@ export default function HeroSection() {
   return (
     <div className="flex flex-col-reverse md:flex-row px-4 md:px-20 py-10 md:py-20 items-center justify-between">
       <div className="flex flex-col items-center md:items-start text-center md:text-left mb-10 md:mb-0">
-        <h1 className="font-extrabold text-3xl md:text-4xl mb-5">
+        <h1 className="font-extrabold text-black text-3xl md:text-4xl mb-5">
           Penetrate the African <br />
           market, Leverage the <br />
           <span className="bg-gradient-to-r from-red-500 to-violet-600 bg-clip-text text-transparent">
@@ -18,7 +18,7 @@ export default function HeroSection() {
           Business Founders.
         </h1>
 
-        <p className="text-sm mb-10">
+        <p className="text-sm text-black mb-10">
           Build a <span className="text-red-400 font-bold">STRONG</span>{" "}
           business by leveraging insights from Africa’s <br />
           most successful business founders
@@ -32,7 +32,9 @@ export default function HeroSection() {
         </button>
 
         <div>
-          <p className="text-xs">Featured more than 500 African CEOs</p>
+          <p className="text-xs text-black">
+            Featured more than 500 African CEOs
+          </p>
         </div>
       </div>
 

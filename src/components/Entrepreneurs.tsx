@@ -13,9 +13,11 @@ export default function Entrepreneurs() {
           height={70}
         />
 
-        <h6 className="font-bold text-lg mb-2">Duis aute irure dolor in</h6>
+        <h6 className="font-bold text-lg mb-2 text-black">
+          Duis aute irure dolor in
+        </h6>
 
-        <p className="text-xs mb-10 text-center md:text-left">
+        <p className="text-xs text-black mb-10 text-center md:text-left">
           reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
           pariatur. At vero eos et accusamus et iusto odio dignissimos ducimus
           qui blanditiis praesentium voluptatum.
@@ -38,9 +40,11 @@ export default function Entrepreneurs() {
           height={70}
         />
 
-        <h6 className="font-bold text-lg mb-2">Duis aute irure dolor in</h6>
+        <h6 className="font-bold text-black text-lg mb-2">
+          Duis aute irure dolor in
+        </h6>
 
-        <p className="text-xs mb-10 text-center md:text-left">
+        <p className="text-xs text-black mb-10 text-center md:text-left">
           reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
           pariatur. At vero eos et accusamus et iusto odio dignissimos ducimus
           qui blanditiis praesentium voluptatum.
@@ -63,9 +67,11 @@ export default function Entrepreneurs() {
           height={70}
         />
 
-        <h6 className="font-bold text-lg mb-2">Duis aute irure dolor in</h6>
+        <h6 className="font-bold text-black text-lg mb-2">
+          Duis aute irure dolor in
+        </h6>
 
-        <p className="text-xs mb-10 text-center md:text-left">
+        <p className="text-xs text-black mb-10 text-center md:text-left">
           reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
           pariatur. At vero eos et accusamus et iusto odio dignissimos ducimus
           qui blanditiis praesentium voluptatum.

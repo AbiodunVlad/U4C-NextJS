@@ -23,11 +23,11 @@ export default function WhoWeAre() {
             WHO WE ARE
           </p>
 
-          <h6 className="font-extrabold text-center text-lg mb-5">
+          <h6 className="font-extrabold text-black text-center text-lg mb-5">
             UNDER 40 CEOs
           </h6>
 
-          <p className="text-sm md:text-base mb-5 md:mb-10  md:text-left">
+          <p className="text-sm text-black md:text-base mb-5 md:mb-10  md:text-left">
             Duis aute irure dolor in reprehenderit in voluptate velit esse
             cillum dolore eu fugiat nulla pariatur. At vero eos et accusamus et
             iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum

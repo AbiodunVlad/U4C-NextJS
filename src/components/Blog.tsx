@@ -20,7 +20,7 @@ export default function Blog() {
                 Creating an effective brand toolkit.
               </p>
 
-              <p className="text-xs font-thin">
+              <p className="text-xs text-black font-thin">
                 Volutpat tellus porta felis, accumsan. Praesent quis amet et
                 scelerisque dictum fringilla id.
               </p>
@@ -35,7 +35,7 @@ export default function Blog() {
                 Creating an effective brand toolkit.
               </p>
 
-              <p className="text-xs font-thin">
+              <p className="text-xs text-black font-thin">
                 Volutpat tellus porta felis, accumsan. Praesent quis amet et
                 scelerisque dictum fringilla id.
               </p>
@@ -50,7 +50,7 @@ export default function Blog() {
                 Creating an effective brand toolkit.
               </p>
 
-              <p className="text-xs font-thin">
+              <p className="text-xs text-black font-thin">
                 Volutpat tellus porta felis, accumsan. Praesent quis amet et
                 scelerisque dictum fringilla id.
               </p>
@@ -67,7 +67,7 @@ export default function Blog() {
                 Creating an effective brand toolkit.
               </p>
 
-              <p className="text-xs font-thin">
+              <p className="text-xs text-black font-thin">
                 Volutpat tellus porta felis, accumsan. Praesent quis amet et
                 scelerisque dictum fringilla id.
               </p>
@@ -82,7 +82,7 @@ export default function Blog() {
                 Creating an effective brand toolkit.
               </p>
 
-              <p className="text-xs font-thin">
+              <p className="text-xs text-black font-thin">
                 Volutpat tellus porta felis, accumsan. Praesent quis amet et
                 scelerisque dictum fringilla id.
               </p>
@@ -97,7 +97,7 @@ export default function Blog() {
                 Creating an effective brand toolkit.
               </p>
 
-              <p className="text-xs font-thin">
+              <p className="text-xs text-black font-thin">
                 Volutpat tellus porta felis, accumsan. Praesent quis amet et
                 scelerisque dictum fringilla id.
               </p>

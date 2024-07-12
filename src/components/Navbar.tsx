@@ -5,12 +5,27 @@ import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+
+import { signOut } from "firebase/auth";
+import { auth, googleProvider } from "../config/firebase";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
+  };
+
+  const router = useRouter();
+
+  const logout = async () => {
+    try {
+      await signOut(auth);
+      router.push("/login");
+    } catch (err) {
+      alert("Logged out");
+    }
   };
 
   return (
@@ -39,17 +54,23 @@ export default function Navbar() {
           Success Stories
         </li>
         <li className="font-medium text-sm mb-4 md:mb-0 md:mr-10">Blog</li>
-        <button className="font-medium text-xs text-center px-5 py-1 mb-4 md:mb-0 md:mr-10 bg-black rounded-full text-white">
+        <button className="font-medium text-xs text-center px-5 py-1 mb-4 md:mb-0 md:mr-5 bg-black rounded-full text-white">
           JOIN OUR <br /> COMMUNITY
         </button>
         <button
-          className="font-medium text-xs text-center px-6 py-3 mb-4 md:mb-0 md:mr-10 rounded-full text-white"
+          className="font-medium text-xs text-center px-6 py-3 mb-4 md:mb-0 md:mr-5 rounded-full text-white"
           style={{ backgroundColor: "#C54ED8" }}
         >
           COURSES
         </button>
-        <button className="font-medium text-xs text-center px-6 py-3 border border-pink-400 rounded-full text-pink-400">
+        <button className="font-medium text-xs text-center px-6 py-3 border border-pink-400 md:mr-5 rounded-full text-pink-400">
           Shop
+        </button>
+        <button
+          onClick={logout}
+          className="font-medium text-xs text-center px-6 py-3 border border-pink-400 rounded-full text-pink-400"
+        >
+          Logout
         </button>
       </ul>
     </div>

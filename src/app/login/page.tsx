@@ -5,8 +5,8 @@ import { useRouter } from "next/navigation";
 import Image from "next/image";
 import SideImage from "@/components/SideImage";
 
-import { auth } from "../../config/firebase";
-import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth, googleProvider } from "../../config/firebase";
+import { signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -25,6 +25,15 @@ export default function Login() {
       router.push("/homePage");
     } catch (err) {
       alert("Failed to login");
+    }
+  };
+
+  const loginWithGoogle = async () => {
+    try {
+      await signInWithPopup(auth, googleProvider);
+      router.push("/homePage");
+    } catch (err) {
+      alert("Google login error");
     }
   };
 
@@ -82,7 +91,10 @@ export default function Login() {
 
         <p className="mb-5 text-black">Or</p>
 
-        <button className="text-black w-full md:w-3/4 p-2 border bg-white rounded-xl mb-10">
+        <button
+          onClick={loginWithGoogle}
+          className="text-black w-full md:w-3/4 p-2 border bg-white rounded-xl mb-10"
+        >
           Login with Google
         </button>
 

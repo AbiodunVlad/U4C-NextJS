@@ -70,7 +70,7 @@ export default function Navbar() {
           onClick={logout}
           className="font-medium text-xs text-center px-6 py-3 border border-pink-400 rounded-full text-pink-400"
         >
-          Logout
+          Signout
         </button>
       </ul>
     </div>

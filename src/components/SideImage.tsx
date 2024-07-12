@@ -15,7 +15,7 @@ export default function SideImage() {
         height={350}
       />
 
-      <p className="font-bold text-center mb-10">
+      <p className="text-black font-bold text-center mb-10">
         Penetrate the African Market, <br /> Leverage the{" "}
         <span className="text-purple-700">Community of African</span> <br />{" "}
         Business Founders.

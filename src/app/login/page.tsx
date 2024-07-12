@@ -5,15 +5,27 @@ import { useRouter } from "next/navigation";
 import Image from "next/image";
 import SideImage from "@/components/SideImage";
 
+import { auth } from "../../config/firebase";
+import { signInWithEmailAndPassword } from "firebase/auth";
+
 export default function Login() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [user, setUser] = useState({
-    email: "",
-    password: "",
+    // email: "",
+    // password: "",
     keepSignedIn: false,
   });
 
-  const onLogin = async () => {
-    alert("Logged in");
+  const router = useRouter();
+
+  const login = async () => {
+    try {
+      await signInWithEmailAndPassword(auth, email, password);
+      router.push("/homePage");
+    } catch (err) {
+      alert("Failed to login");
+    }
   };
 
   return (
@@ -27,27 +39,27 @@ export default function Login() {
           height={100}
         />
 
-        <h2 className="font-bold text-3xl mb-5">Login</h2>
+        <h2 className="font-bold text-black text-3xl mb-5">Login</h2>
 
         <input
-          className="w-full md:w-3/4 p-2 border border-red-300 rounded-lg mb-5 focus:outline-none focus:border-red-800"
+          className="text-black w-full md:w-3/4 p-2 border border-red-300 rounded-lg mb-5 focus:outline-none focus:border-red-800"
           placeholder="Email"
           id="email"
           type="email"
-          value={user.email}
-          onChange={(e) => setUser({ ...user, email: e.target.value })}
+          // value={user.email}
+          onChange={(e) => setEmail(e.target.value)}
         />
 
         <input
-          className="w-full md:w-3/4 p-2 border border-red-300 rounded-lg mb-5 focus:outline-none focus:border-red-800"
+          className="text-black w-full md:w-3/4 p-2 border border-red-300 rounded-lg mb-5 focus:outline-none focus:border-red-800"
           placeholder="Password"
           type="password"
-          value={user.password}
-          onChange={(e) => setUser({ ...user, password: e.target.value })}
+          // value={user.password}
+          onChange={(e) => setPassword(e.target.value)}
         />
 
         <button
-          onClick={onLogin}
+          onClick={login}
           className="w-full md:w-3/4 p-2 border bg-purple-700 rounded-full mb-5 text-white font-bold"
         >
           Login
@@ -63,18 +75,18 @@ export default function Login() {
               setUser({ ...user, keepSignedIn: e.target.checked })
             }
           />
-          <label htmlFor="keep-signed-in" className="text-xs">
+          <label htmlFor="keep-signed-in" className="text-black text-xs">
             Keep me signed in
           </label>
         </div>
 
-        <p className="mb-5">Or</p>
+        <p className="mb-5 text-black">Or</p>
 
-        <button className="w-full md:w-3/4 p-2 border bg-white rounded-xl mb-10">
+        <button className="text-black w-full md:w-3/4 p-2 border bg-white rounded-xl mb-10">
           Login with Google
         </button>
 
-        <p>
+        <p className="text-black">
           Need an account? {""}
           <Link href="/signup" className="text-blue-600 font-bold">
             Create one

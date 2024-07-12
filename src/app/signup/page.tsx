@@ -5,15 +5,29 @@ import { useRouter } from "next/navigation";
 import Image from "next/image";
 import SideImage from "@/components/SideImage";
 
+import { auth } from "../../config/firebase";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+
 export default function Signup() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [user, setUser] = useState({
-    username: "",
-    email: "",
-    password: "",
+    // username: "",
+    // email: "",
+    // password: "",
     keepSignedIn: false,
   });
 
-  const onSignup = async () => {};
+  const router = useRouter();
+
+  const signup = async () => {
+    try {
+      await createUserWithEmailAndPassword(auth, email, password);
+      router.push("/login");
+    } catch (err) {
+      alert("There was an error");
+    }
+  };
 
   return (
     <div className="flex flex-col-reverse md:flex-row items-center justify-around min-h-screen">
@@ -26,36 +40,36 @@ export default function Signup() {
           height={100}
         />
 
-        <h2 className="font-bold text-3xl mb-5">Signup</h2>
+        <h2 className="font-bold text-black text-3xl mb-5">Signup</h2>
 
-        <input
-          className="w-full md:w-3/4 p-2 border border-red-300 rounded-lg mb-5 focus:outline-none focus:border-red-800"
+        {/* <input
+          className="text-black w-full md:w-3/4 p-2 border border-red-300 rounded-lg mb-5 focus:outline-none focus:border-red-800"
           placeholder="Username"
           id="username"
           type="text"
           value={user.username}
           onChange={(e) => setUser({ ...user, username: e.target.value })}
-        />
+        /> */}
 
         <input
-          className="w-full md:w-3/4 p-2 border border-red-300 rounded-lg mb-5 focus:outline-none focus:border-red-800"
+          className="text-black w-full md:w-3/4 p-2 border border-red-300 rounded-lg mb-5 focus:outline-none focus:border-red-800"
           placeholder="Email"
           id="email"
           type="email"
-          value={user.email}
-          onChange={(e) => setUser({ ...user, email: e.target.value })}
+          // value={user.email}
+          onChange={(e) => setEmail(e.target.value)}
         />
 
         <input
-          className="w-full md:w-3/4 p-2 border border-red-300 rounded-lg mb-5 focus:outline-none focus:border-red-800"
+          className="text-black w-full md:w-3/4 p-2 border border-red-300 rounded-lg mb-5 focus:outline-none focus:border-red-800"
           placeholder="Password"
           type="password"
-          value={user.password}
-          onChange={(e) => setUser({ ...user, password: e.target.value })}
+          // value={user.password}
+          onChange={(e) => setPassword(e.target.value)}
         />
 
         <button
-          onClick={onSignup}
+          onClick={signup}
           className="w-full md:w-3/4 p-2 border bg-purple-700 rounded-full mb-5 text-white font-bold"
         >
           Signup
@@ -71,19 +85,19 @@ export default function Signup() {
               setUser({ ...user, keepSignedIn: e.target.checked })
             }
           />
-          <label htmlFor="keep-signed-in" className="text-xs">
+          <label htmlFor="keep-signed-in" className="text-xs text-black">
             Keep me signed in
           </label>
         </div>
 
-        <p className="mb-5">Or</p>
+        <p className="mb-5 text-black">Or</p>
 
-        <button className="w-full md:w-3/4 p-2 border bg-white rounded-xl mb-10">
+        <button className="text-black w-full md:w-3/4 p-2 border bg-white rounded-xl mb-10">
           {" "}
           Signup with Google
         </button>
 
-        <p>
+        <p className="text-black">
           Do you have an account already? {""}
           <Link href="/login" className="text-blue-600 font-bold">
             Log in

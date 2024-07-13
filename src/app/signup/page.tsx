@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
@@ -18,25 +18,39 @@ export default function Signup() {
     keepSignedIn: false,
   });
 
+  const [isClient, setIsClient] = useState(false);
+
   const router = useRouter();
 
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
   const signup = async () => {
-    try {
-      await createUserWithEmailAndPassword(auth, email, password);
-      router.push("/login");
-    } catch (err) {
-      alert("There was an error");
+    if (isClient) {
+      try {
+        await createUserWithEmailAndPassword(auth, email, password);
+        router.push("/login");
+      } catch (err) {
+        alert("There was an error");
+      }
     }
   };
 
   const signupWithGoogle = async () => {
-    try {
-      await signInWithPopup(auth, googleProvider);
-      router.push("/login");
-    } catch (err) {
-      alert("There was an error");
+    if (isClient) {
+      try {
+        await signInWithPopup(auth, googleProvider);
+        router.push("/login");
+      } catch (err) {
+        alert("There was an error");
+      }
     }
   };
+
+  if (!isClient) {
+    return null;
+  }
 
   return (
     <div className="flex flex-col-reverse md:flex-row items-center justify-around min-h-screen">

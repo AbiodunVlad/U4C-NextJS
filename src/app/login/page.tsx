@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
@@ -17,7 +17,13 @@ export default function Login() {
     keepSignedIn: false,
   });
 
+  const [isClient, setIsClient] = useState(false);
+
   const router = useRouter();
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   const login = async () => {
     try {
@@ -34,6 +40,10 @@ export default function Login() {
       router.push("/homePage");
     } catch (err) {
       alert("Google login error");
+    }
+
+    if (!isClient) {
+      return null;
     }
   };
 

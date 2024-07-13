@@ -17,39 +17,39 @@ export default function Login() {
     keepSignedIn: false,
   });
 
-  const [isClient, setIsClient] = useState(false);
+  // const [isClient, setIsClient] = useState(false);
 
   const router = useRouter();
 
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
+  // useEffect(() => {
+  //   setIsClient(true);
+  // }, []);
 
   const login = async () => {
-    if (isClient) {
-      try {
-        await signInWithEmailAndPassword(auth, email, password);
-        router.push("/homePage");
-      } catch (err) {
-        alert("Failed to login");
-      }
+    // if (isClient) {
+    try {
+      await signInWithEmailAndPassword(auth, email, password);
+      router.push("/homePage");
+    } catch (err) {
+      alert("Failed to login");
     }
+    // }
   };
 
   const loginWithGoogle = async () => {
-    if (isClient) {
-      try {
-        await signInWithPopup(auth, googleProvider);
-        router.push("/homePage");
-      } catch (err) {
-        alert("Google login error");
-      }
+    // if (isClient) {
+    try {
+      await signInWithPopup(auth, googleProvider);
+      router.push("/homePage");
+    } catch (err) {
+      alert("Google login error");
     }
+    // }
   };
 
-  if (!isClient) {
-    return null;
-  }
+  // if (!isClient) {
+  //   return null;
+  // }
 
   return (
     <div className="flex flex-col-reverse md:flex-row items-center justify-around min-h-screen">

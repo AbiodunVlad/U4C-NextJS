@@ -12,6 +12,13 @@ const firebaseConfig = {
   measurementId: "G-LVG953LT56",
 };
 
+// let analytics;
+// if (typeof window !== "undefined") {
+//   import("firebase/analytics").then(({ getAnalytics }) => {
+//     analytics = getAnalytics(app);
+//   });
+// }
+
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 export const auth = getAuth(app);
